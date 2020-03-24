@@ -1,27 +1,27 @@
 <?php
 setcookie('noCokkie', 'noCokkie', [
     'expires' => time()+3600,
-    'path' => '/same-site-cookies',
+    'path' => '/samesite-cookies',
     'secure' => true,
     'httponly' => true,
     ]);
 setcookie('noneCokkie', 'noneCokkie', [
     'expires' => time()+3600,
-    'path' => '/same-site-cookies',
+    'path' => '/samesite-cookies',
     'secure' => true,
     'httponly' => true,
     'samesite' => 'None'
     ]);
 setcookie('strictCokkie', 'strictCokkie', [
     'expires' => time()+3600,
-    'path' => '/same-site-cookies',
+    'path' => '/samesite-cookies',
     'secure' => true,
     'httponly' => true,
     'samesite' => 'Strict'
 ]);
 setcookie('laxCokkie', 'laxCokkie', [
     'expires' => time()+3600,
-    'path' => '/same-site-cookies',
+    'path' => '/samesite-cookies',
     'secure' => true,
     'httponly' => true,
     'samesite' => 'Lax'
