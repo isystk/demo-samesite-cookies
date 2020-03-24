@@ -1,25 +1,25 @@
 <?php
-setcookie('noCokkie', 'noCokkie', [
+setcookie('noCokkie', '1', [
     'expires' => time()+3600,
     'path' => '/samesite-cookies',
     'secure' => true,
     'httponly' => true,
     ]);
-setcookie('noneCokkie', 'noneCokkie', [
+setcookie('noneCokkie', '1', [
     'expires' => time()+3600,
     'path' => '/samesite-cookies',
     'secure' => true,
     'httponly' => true,
     'samesite' => 'None'
     ]);
-setcookie('strictCokkie', 'strictCokkie', [
+setcookie('strictCokkie', '1', [
     'expires' => time()+3600,
     'path' => '/samesite-cookies',
     'secure' => true,
     'httponly' => true,
     'samesite' => 'Strict'
 ]);
-setcookie('laxCokkie', 'laxCokkie', [
+setcookie('laxCokkie', '1', [
     'expires' => time()+3600,
     'path' => '/samesite-cookies',
     'secure' => true,
@@ -50,10 +50,10 @@ padding: 10px;
         <h1>クッキーのSameSite属性を検証デモ</h1>
         <p>ここに送信されたクッキーが表示されます</p>
         <div class="result">
-        noCokkie: <?php echo $_COOKIE['noCokkie']; ?><br>
-        noneCokkie: <?php echo $_COOKIE['noneCokkie']; ?><br>
-        strictCokkie: <?php echo $_COOKIE['strictCokkie']; ?><br>
-        laxCokkie: <?php echo $_COOKIE['laxCokkie']; ?>
+        noCokkie: <?php if($_COOKIE['noCokkie'] == '1'){ echo '○'; }  ?><br>
+        noneCokkie: <?php if($_COOKIE['noneCokkie'] == '1'){ echo '○'; } ?><br>
+        strictCokkie: <?php if($_COOKIE['strictCokkie'] == '1'){ echo '○'; } ?><br>
+        laxCokkie: <?php if($_COOKIE['laxCokkie'] == '1'){ echo '○'; } ?><br>
         </div>
         <a href="./reset.php">クッキーをリセット</a>
     </div>
