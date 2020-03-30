@@ -1,2 +1,5 @@
 Header set Access-Control-Allow-Origin "*"
 
+# Cookieにデフォルトの属性を追加する場合
+#Header always edit Set-Cookie (.*) "$1; secure; SameSite=none"
+
